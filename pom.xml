@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.learn.ssm</groupId>
+    <artifactId>ssm</artifactId>
+    <name>ssm</name>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>chapter2</module>
+        <module>chapter3</module>
+        <module>chapter4</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <mybatis.version>3.4.6</mybatis.version>
+        <mysql-connector-J.version>8.0.13</mysql-connector-J.version>
+        <dbcp.version>1.4</dbcp.version>
+        <dbcp2.version>2.5.0</dbcp2.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <log4j2.version>2.11.1</log4j2.version>
+        <junit.version>4.12</junit.version>
+        <cglib.version>3.2.9</cglib.version>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- Java EE APIs -->
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${javax.inject.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>${servlet.jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.taglibs</groupId>
+                <artifactId>taglibs-standard-impl</artifactId>
+                <version>${taglibs.standard.impl.version}</version>
+            </dependency>
+
+            <!-- Mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-J.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>${dbcp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>${dbcp2.version}</version>
+            </dependency>
+
+            <!-- Logging -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-1.2-api</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <!--用于与slf4j保持桥接-->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
+            <!-- JUnit Testing -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Dynamic Proxy -->
+            <!-- CGLib -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
