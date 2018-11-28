@@ -12,10 +12,13 @@
         <module>chapter2</module>
         <module>chapter3</module>
         <module>chapter4</module>
+        <module>chapter5</module>
+        <module>chapter9</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
+        <spring.version>5.1.2.RELEASE</spring.version>
         <mybatis.version>3.4.6</mybatis.version>
         <mysql-connector-J.version>8.0.13</mysql-connector-J.version>
         <dbcp.version>1.4</dbcp.version>
@@ -34,16 +37,6 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
@@ -68,22 +61,12 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-expression</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
